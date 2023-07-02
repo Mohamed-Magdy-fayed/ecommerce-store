@@ -37,3 +37,10 @@ export interface Color {
   name: string;
   value: string;
 }
+
+export interface Store {
+  id: string;
+  name: string;
+  activeBillboard: string | null;
+  billboards: Billboard[];
+}
