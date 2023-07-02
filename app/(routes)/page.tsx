@@ -9,10 +9,8 @@ export const revalidate = 0;
 
 const HomePage = async () => {
   const store = await getStore();
-  console.log("store", store);
-
-  const billboard = !store.activeBillboard
-    ? store.billboards.length > 0
+  const billboard = !store?.activeBillboard
+    ? store?.billboards.length > 0
       ? store.billboards[0]
       : null
     : await getBillboard(store.activeBillboard);
